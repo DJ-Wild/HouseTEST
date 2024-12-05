@@ -5,13 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>blackberri.house</title>
   <style>
+    /* Flexbox для всей страницы */
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
       background: url('photo.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Контент заполняет всю высоту страницы */
+    .content {
+      flex: 1;
       text-align: center;
+      padding: 20px;
     }
 
     header {
@@ -39,17 +49,10 @@
       border-radius: 10px;
     }
 
-    .info {
-      font-family: 'Verdana', sans-serif;
-      font-size: 16px;
-    }
-
     footer {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #aaa;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 10px;
+      text-align: center;
     }
 
     a {
@@ -59,16 +62,20 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Добро пожаловать в blackberri.house!</h1>
   </header>
 
-  <p>Blackberri.house – это место, где мы можем веселиться, общаться и играть в Roblox.</p>
-  <p class="info">К сожалению, робуксы мы не выдаем. Но с нами никогда не бывает скучно!</p>
+  <div class="content">
+    <p>Blackberri.house – это место, где мы можем веселиться, общаться и играть в Roblox.</p>
+    <p class="info">К сожалению, робуксы мы не выдаем. Но с нами никогда не бывает скучно!</p>
+  </div>
 
   <footer>
     © 2024 blackberri.house. Все права защищены. <br>
     Свяжитесь с нами в <a href="https://vk.com" target="_blank">ВКонтакте</a>.
   </footer>
+
 </body>
 </html>
